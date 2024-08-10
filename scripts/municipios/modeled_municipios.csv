@@ -1,0 +1,161 @@
+municipio_id,municipio_name,municipio_zona
+1,Bairro Imperial de São Cristóvão,Zona Central
+2,Benfica,Zona Central
+3,Caju,Zona Central
+4,Catumbi,Zona Central
+5,Centro,Zona Central
+6,Cidade Nova,Zona Central
+7,Estácio,Zona Central
+8,Gamboa,Zona Central
+9,Glória,Zona Central
+10,Lapa,Zona Central
+11,Mangueira,Zona Central
+12,Paquetá,Zona Central
+13,Rio Comprido,Zona Central
+14,Santa Teresa,Zona Central
+15,Santo Cristo,Zona Central
+16,Saúde,Zona Central
+17,Vasco da Gama,Zona Central
+18,Botafogo,Zona Sul
+19,Catete,Zona Sul
+20,Copacabana,Zona Sul
+21,Cosme Velho,Zona Sul
+22,Flamengo,Zona Sul
+23,Gávea,Zona Sul
+24,Humaitá,Zona Sul
+25,Ipanema,Zona Sul
+26,Jardim Botânico,Zona Sul
+27,Lagoa,Zona Sul
+28,Laranjeiras,Zona Sul
+29,Leblon,Zona Sul
+30,Leme,Zona Sul
+31,Rocinha,Zona Sul
+32,São Conrado,Zona Sul
+33,Urca,Zona Sul
+34,Vidigal,Zona Sul
+35,Anil,Zona Oeste
+36,Barra da Tijuca,Zona Oeste
+37,Camorim,Zona Oeste
+38,Cidade de Deus,Zona Oeste
+39,Curicica,Zona Oeste
+40,Freguesia de Jacarepaguá,Zona Oeste
+41,Gardênia Azul,Zona Oeste
+42,Grumari,Zona Oeste
+43,Itanhangá,Zona Oeste
+44,Jacarepaguá,Zona Oeste
+45,Joá,Zona Oeste
+46,Praça Seca,Zona Oeste
+47,Pechincha,Zona Oeste
+48,Recreio dos Bandeirantes,Zona Oeste
+49,Tanque,Zona Oeste
+50,Taquara,Zona Oeste
+51,Vargem Grande,Zona Oeste
+52,Vargem Pequena,Zona Oeste
+53,Vila Valqueire,Zona Oeste
+54,Bangu,Zona Oeste
+55,Deodoro,Zona Oeste
+56,Gericinó,Zona Oeste
+57,Jardim Sulacap,Zona Oeste
+58,Magalhães Bastos,Zona Oeste
+59,Padre Miguel,Zona Oeste
+60,Realengo,Zona Oeste
+61,Santíssimo,Zona Oeste
+62,Senador Camará,Zona Oeste
+63,Vila Kennedy,Zona Oeste
+64,Vila Militar,Zona Oeste
+65,Campo Grande,Zona Oeste
+66,Cosmos,Zona Oeste
+67,Guaratiba,Zona Oeste
+68,Inhoaíba,Zona Oeste
+69,Paciência,Zona Oeste
+70,Pedra de Guaratiba,Zona Oeste
+71,Santa Cruz,Zona Oeste
+72,Senador Vasconcelos,Zona Oeste
+73,Sepetiba,Zona Oeste
+74,Alto da Boa Vista,Zona Norte
+75,Andaraí,Zona Norte
+76,Grajaú,Zona Norte
+77,Maracanã,Zona Norte
+78,Praça da Bandeira,Zona Norte
+79,Tijuca,Zona Norte
+80,Vila Isabel,Zona Norte
+81,Abolição,Zona Norte
+82,Água Santa,Zona Norte
+83,Cachambi,Zona Norte
+84,Del Castilho,Zona Norte
+85,Encantado,Zona Norte
+86,Engenho de Dentro,Zona Norte
+87,Engenho Novo,Zona Norte
+88,Higienópolis,Zona Norte
+89,Jacaré,Zona Norte
+90,Jacarezinho,Zona Norte
+91,Lins de Vasconcelos,Zona Norte
+92,Manguinhos,Zona Norte
+93,Maria da Graça,Zona Norte
+94,Méier,Zona Norte
+95,Piedade,Zona Norte
+96,Pilares,Zona Norte
+97,Riachuelo,Zona Norte
+98,Rocha,Zona Norte
+99,Sampaio,Zona Norte
+100,São Francisco Xavier,Zona Norte
+101,Todos os Santos,Zona Norte
+102,Bonsucesso,Zona Norte
+103,Bancários,Zona Norte
+104,Cacuia,Zona Norte
+105,Cidade Universitária,Zona Norte
+106,Cocotá,Zona Norte
+107,Freguesia,Zona Norte
+108,Galeão,Zona Norte
+109,Jardim Carioca,Zona Norte
+110,Jardim Guanabara,Zona Norte
+111,Maré,Zona Norte
+112,Moneró,Zona Norte
+113,Olaria,Zona Norte
+114,Pitangueiras,Zona Norte
+115,Portuguesa,Zona Norte
+116,Praia da Bandeira,Zona Norte
+117,Ramos,Zona Norte
+118,Ribeira,Zona Norte
+119,Tauá,Zona Norte
+120,Zumbi,Zona Norte
+121,Acari,Zona Norte
+122,Anchieta,Zona Norte
+123,Barros Filho,Zona Norte
+124,Bento Ribeiro,Zona Norte
+125,Brás de Pina,Zona Norte
+126,Campinho,Zona Norte
+127,Cavalcanti,Zona Norte
+128,Cascadura,Zona Norte
+129,Coelho Neto,Zona Norte
+130,Colégio,Zona Norte
+131,Complexo do Alemão,Zona Norte
+132,Cordovil,Zona Norte
+133,Costa Barros,Zona Norte
+134,Engenheiro Leal,Zona Norte
+135,Engenho da Rainha,Zona Norte
+136,Guadalupe,Zona Norte
+137,Honório Gurgel,Zona Norte
+138,Inhaúma,Zona Norte
+139,Irajá,Zona Norte
+140,Jardim América,Zona Norte
+141,Madureira,Zona Norte
+142,Marechal Hermes,Zona Norte
+143,Oswaldo Cruz,Zona Norte
+144,Parada de Lucas,Zona Norte
+145,Parque Anchieta,Zona Norte
+146,Parque Colúmbia,Zona Norte
+147,Pavuna,Zona Norte
+148,Penha,Zona Norte
+149,Penha Circular,Zona Norte
+150,Quintino Bocaiuva,Zona Norte
+151,Ricardo de Albuquerque,Zona Norte
+152,Rocha Miranda,Zona Norte
+153,Tomás Coelho,Zona Norte
+154,Turiaçu,Zona Norte
+155,Vaz Lobo,Zona Norte
+156,Vicente de Carvalho,Zona Norte
+157,Vigário Geral,Zona Norte
+158,Vila da Penha,Zona Norte
+159,Vila Kosmos,Zona Norte
+160,Vista Alegre,Zona Norte
