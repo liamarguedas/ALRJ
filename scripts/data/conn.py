@@ -1,6 +1,5 @@
 import sqlite3
 import pandas as pd
-import json
 from pathlib import Path
 
 BASE_DIR = Path(__file__).parents[2]
@@ -12,8 +11,10 @@ def main():
     db = BASE_DIR / "db" / DB_NAME
     conn = sqlite3.connect(db)
     cursor = conn.cursor()
+    # Drop the table if it exists
+    cursor.execute('DROP TABLE IF EXISTS Municipios')
     create_profiles_table = '''
-    CREATE TABLE IF NOT EXISTS Profiles (
+        CREATE TABLE IF NOT EXISTS Profiles (
         profile_id INTEGER PRIMARY KEY AUTOINCREMENT,
         profile_name TEXT NOT NULL,
         created DATETIME DEFAULT CURRENT_TIMESTAMP
@@ -54,19 +55,19 @@ def main():
     # cursor.execute(create_cadastro_table)
     cursor.execute(create_anotacoes_table)
 
-    insert_municipio(conn, cursor, *read_municipios())
-    # Commit the changes and close the connection
     conn.commit()
     conn.close()
 
 def read_municipios():
     """_"""
     data = pd.read_csv("../municipios/modeled_municipios.csv")
-    return data["municipio_id"].to_list(), data["municipio_name"].to_list(), data["municipio_zona"].to_list()
+    return data
 
-
-def insert_municipio(conn, cursor, municipio_id, municipio_name, municipio_zona):
+def insert_municipio(municipio_id, municipio_name, municipio_zona):
     """_"""
+    db = BASE_DIR / "db" / DB_NAME
+    conn = sqlite3.connect(db)
+    cursor = conn.cursor()
     insert_municipio_sql = '''
     INSERT INTO Municipios (municipio_id, municipio_name, municipio_zona)
     VALUES (?, ?, ?)
@@ -77,3 +78,7 @@ def insert_municipio(conn, cursor, municipio_id, municipio_name, municipio_zona)
 
 if __name__ == "__main__":
     main()
+    municipios_data = read_municipios()
+
+    for index, row in municipios_data.iterrows():
+        insert_municipio(row['municipio_id'], row['municipio_name'], row['municipio_zona'])
