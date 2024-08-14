@@ -19,4 +19,13 @@ export default class Database {
   deleteAnotacao(id) {
     this.db.run(`DELETE FROM Anotacoes WHERE anotacao_id = ?`, id);
   }
+  insertCadastro(profile, municipio) {
+    this.db.run(
+      `INSERT INTO Cadastro (profile_id, municipio_id) VALUES (?, ?)`,
+      [profile, municipio],
+    );
+  }
+  deleteCadastro(id) {
+    this.db.run(`DELETE FROM Cadastro WHERE cadastro_id = ?`, id);
+  }
 }
