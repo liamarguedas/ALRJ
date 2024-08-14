@@ -11,6 +11,7 @@ def main():
     db = BASE_DIR / "db" / DB_NAME
     conn = sqlite3.connect(db)
     cursor = conn.cursor()
+
     # Drop the table if it exists
     cursor.execute('DROP TABLE IF EXISTS Municipios')
     create_profiles_table = '''
@@ -29,14 +30,16 @@ def main():
     );
     '''
 
-    # create_cadastro_table = '''
-    # CREATE TABLE IF NOT EXISTS Cadastro (
-    #     cadastro_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    #     profile_id INTEGER NOT NULL,
-    #     created DATETIME DEFAULT CURRENT_TIMESTAMP,
-    #     FOREIGN KEY (profile_id) REFERENCES Profiles (profile_id)
-    # );
-    # '''
+    create_cadastro_table = '''
+    CREATE TABLE IF NOT EXISTS Cadastro (
+        cadastro_id INTEGER PRIMARY KEY AUTOINCREMENT,
+        profile_id INTEGER NOT NULL,
+        municipio_id INTEGER NOT NULL,
+        created DATETIME DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (municipio_id) REFERENCES Municipios (municipio_id),
+        FOREIGN KEY (profile_id) REFERENCES Profiles (profile_id)
+    );
+    '''
 
     create_anotacoes_table = '''
     CREATE TABLE IF NOT EXISTS Anotacoes (
@@ -52,7 +55,7 @@ def main():
 
     cursor.execute(create_profiles_table)
     cursor.execute(create_municipios_table)
-    # cursor.execute(create_cadastro_table)
+    cursor.execute(create_cadastro_table)
     cursor.execute(create_anotacoes_table)
 
     conn.commit()
