@@ -11,8 +11,6 @@
 	.st4{fill:none;}
 	.st5{fill:#6D6D6D;}
 
-
-
 svg {
   width: 100%;
   height: auto;
@@ -20,6 +18,8 @@ svg {
   display: block;
   margin: 0 auto;
   background-color: ;
+  align-items: left;
+  text-align: left;
 }
 
 body{
@@ -32,6 +32,7 @@ body{
     max-width: 800px;
     display: block;
     margin: 0 auto;
+	text-align: left;
 }
 
 .region {

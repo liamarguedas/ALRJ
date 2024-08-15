@@ -1,3 +1,39 @@
+/* MapaRJ.css */
 body {
-  background-color: #ffffff !important; /* Força a cor de fundo para branco */
+  background-color: #ffffff !important; /* Cor de fundo branca */
+}
+
+.tooltip {
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  display: none; /* Inicialmente oculto */
+  pointer-events: none;
+  font-size: 12px;
+  white-space: nowrap; /* Impede a quebra de linha */
+  z-index: 1000; /* Garante que o pop-up esteja acima dos outros elementos */
+}
+
+#svg-container {
+  float: right; /* Posiciona o container à esquerda */
+  width: 60%; /* Ajuste conforme necessário */
+  height: auto; /* Ajusta a altura conforme o conteúdo */
+}
+
+.region {
+  fill: #00726a;
+  stroke: #ffffff;
+  stroke-miterlimit: 10;
+  cursor: pointer;
+  transition: fill 0.3s;
+}
+
+.region:hover {
+  fill: #00bfac;
+}
+
+.region.active {
+  fill: #ff6347;
 }

@@ -3,31 +3,31 @@ import './MapaRJ.css';
 
 const MapaRJ = () => {
   useEffect(() => {
-    // Carregar o SVG usando fetch
     fetch('/Mapa_do_IDH_do_Rio_de_Janeiro_(2010).svg')
       .then(response => response.text())
       .then(svgContent => {
-        // Inserir o conteúdo do SVG diretamente no DOM
         const svgContainer = document.getElementById('svg-container');
         svgContainer.innerHTML = svgContent;
-
-        // Selecionar o documento SVG
         const svgElement = svgContainer.querySelector('svg');
-        
+
+        const tooltip = document.createElement('div');
+        tooltip.className = 'tooltip';
+        document.body.appendChild(tooltip);
+
         svgElement.querySelectorAll('.region').forEach((region, index) => {
-          // Calcular a posição central da região
-          const bbox = region.getBBox();
-          const x = bbox.x + bbox.width / 2;
-          const y = bbox.y + bbox.height / 2 + 4;
+          // Definir um nome fictício para cada região
+          region.setAttribute('data-name', `Região ${index + 1}`);
 
-          // Criar o elemento de texto e posicioná-lo
-          const textElement = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-          textElement.setAttribute('x', x);
-          textElement.setAttribute('y', y);
-          textElement.setAttribute('class', 'number');
-          textElement.textContent = index + 1;
+          region.addEventListener('mouseover', function (event) {
+            tooltip.textContent = this.getAttribute('data-name');
+            tooltip.style.display = 'block';
+            tooltip.style.left = `${event.pageX + 10}px`;
+            tooltip.style.top = `${event.pageY + 10}px`;
+          });
 
-          svgElement.appendChild(textElement);
+          region.addEventListener('mouseout', function () {
+            tooltip.style.display = 'none';
+          });
 
           // Adicionar interatividade de clique à região
           region.addEventListener('click', function () {
