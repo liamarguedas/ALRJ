@@ -44,8 +44,5 @@
 #svg-container {
   margin-left: 250px; /* Espaço para o menu lateral */
   transition: margin-left 0.3s ease;
-}
-
-.sidebar.open + #svg-container {
-  margin-left: 0; /* Remove o espaço quando o menu está aberto */
+  /* align-items: center; */
 }

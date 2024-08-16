@@ -1,6 +1,6 @@
-/* MapaRJ.css */
 body {
-  background-color: #ffffff !important; /* Cor de fundo branca */
+  background-color: #ffffff !important;
+
 }
 
 .tooltip {
@@ -9,17 +9,71 @@ body {
   color: #fff;
   padding: 5px;
   border-radius: 3px;
-  display: none; /* Inicialmente oculto */
+  display: none;
   pointer-events: none;
   font-size: 12px;
-  white-space: nowrap; /* Impede a quebra de linha */
-  z-index: 1000; /* Garante que o pop-up esteja acima dos outros elementos */
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.anotacao-container {
+  width: 30%;
+  height: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  align-items: center;
+  background-color: #f9f9f9;
+  transition: 3s;
+}
+
+.anotacao-container h2 {
+  margin-top: 0;
+}
+
+.anotacao-campo {
+  margin-bottom: 10px;
+}
+
+.anotacao-campo label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.anotacao-campo input {
+  width: 92%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.anotacao-container textarea {
+  width: 90%;
+  height: 200px;
+  resize: none;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 #svg-container {
-  float: right; /* Posiciona o container à esquerda */
-  width: 60%; /* Ajuste conforme necessário */
-  height: auto; /* Ajusta a altura conforme o conteúdo */
+  width: 100%;
+  height: auto;
+  transition: width 0.3s ease;
+}
+
+#svg-container.reduced {
+  width: 60%;
 }
 
 .region {
@@ -35,5 +89,5 @@ body {
 }
 
 .region.active {
-  fill: #ff6347;
+  fill: #ff6347; /* Cor ao clicar duas vezes */
 }

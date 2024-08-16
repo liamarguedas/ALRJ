@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './MapaRJ.css';
 
-// O JSON estruturado conforme fornecido
+
 const regioes = {
   "Zona Central": [
     "Bairro Imperial de São Cristóvão", "Benfica", "Caju", "Catumbi", "Centro", "Cidade Nova", "Estácio", 
@@ -106,7 +106,7 @@ const MapaRJ = () => {
       .catch(error => {
         console.error('Erro ao carregar o SVG:', error);
       });
-  }, []);
+  }, );
 
   return (
     <div>
