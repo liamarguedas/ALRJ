@@ -1,6 +1,5 @@
 body {
   background-color: #ffffff !important;
-
 }
 
 .tooltip {
@@ -18,62 +17,51 @@ body {
 
 .main-container {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-  padding: 20px;
-  box-sizing: border-box;
+  position: relative;
 }
 
 .anotacao-container {
+  position: absolute;
+  left: 20px;
+  top: 20px;
   width: 30%;
-  height: 50%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  align-items: center;
   background-color: #f9f9f9;
-  transition: 3s;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
 }
 
-.anotacao-container h2 {
-  margin-top: 0;
+.close-button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  float: right;
+  cursor: pointer;
 }
 
-.anotacao-campo {
-  margin-bottom: 10px;
-}
-
-.anotacao-campo label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.anotacao-campo input {
-  width: 92%;
-  padding: 5px;
-  border: 1px solid #ccc;
+.save-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #00726a;
+  color: #fff;
   border-radius: 5px;
-}
-
-.anotacao-container textarea {
-  width: 90%;
-  height: 200px;
-  resize: none;
-  padding: 10px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  cursor: pointer;
 }
 
 #svg-container {
-  width: 100%;
+  width: 60%;
   height: auto;
-  transition: width 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 #svg-container.reduced {
-  width: 60%;
+  transform: translateX(20%);
 }
 
 .region {
@@ -89,5 +77,5 @@ body {
 }
 
 .region.active {
-  fill: #ff6347; /* Cor ao clicar duas vezes */
+  fill: #ff6347;
 }

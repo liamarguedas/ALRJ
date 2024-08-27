@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './MapaRJ.css';
 
 
@@ -70,6 +70,8 @@ const criarListaRegioes = (json) => {
 
 const MapaRJ = () => {
   const listaRegioes = criarListaRegioes(regioes);
+  const [activeRegion, setActiveRegion] = useState(null);
+  const [isNoteOpen, setIsNoteOpen] = useState(false);
 
   useEffect(() => {
     fetch('/Mapa_do_IDH_do_Rio_de_Janeiro_(2010).svg')
@@ -99,6 +101,8 @@ const MapaRJ = () => {
           });
 
           region.addEventListener('click', function () {
+            setActiveRegion(regionName);
+            setIsNoteOpen(true);
             this.classList.toggle('active');
           });
         });
@@ -106,14 +110,33 @@ const MapaRJ = () => {
       .catch(error => {
         console.error('Erro ao carregar o SVG:', error);
       });
-  }, );
+  }, []);
+
+  const closeNote = () => {
+    setIsNoteOpen(false);
+  };
 
   return (
-    <div>
-      <h1 style={{ textAlign: 'center' }}>Mapa Interativo do Rio de Janeiro</h1>
-      <div id="svg-container"></div>
+    <div className={`main-container ${isNoteOpen ? 'note-open' : ''}`}>
+      <div id="svg-container" className={isNoteOpen ? 'reduced' : ''}></div>
+      {isNoteOpen && (
+        <div className="anotacao-container">
+          <button className="close-button" onClick={closeNote}>X</button>
+          <h2>{activeRegion}</h2>
+          <div className="anotacao-campo">
+            <label>Data da última visita:</label>
+            <input type="date" />
+          </div>
+          <div className="anotacao-campo">
+            <label>Anotações:</label>
+            <textarea />
+          </div>
+          <button className="save-button" >Salvar alterações</button>
+        </div>
+      )}
     </div>
   );
 };
+
 
 export default MapaRJ;
